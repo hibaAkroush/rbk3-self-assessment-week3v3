@@ -11,8 +11,13 @@ var Fish = Backbone.Model.extend({
   // i will make a function toggleDescription invoked from event
   // this function should set the value of description in default
   // to nothing when invoked
-  toggleDescription: function(){
-  	this.set("description",'')
+
+  toggleDescription: function(fish){
+  	console.log(!this.get(this.defaults.displayInfo))
+  	this.set(this.defaults.displayInfo,!this.get(this.defaults.displayInfo))
   }
 
 });
+
+
+//var fishTemplate = this.model.get('displayInfo') ? this.fishTemplateDetails : this.fishTemplateBasic;
