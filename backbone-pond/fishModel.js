@@ -11,10 +11,12 @@ var Fish = Backbone.Model.extend({
   // i will make a function toggleDescription invoked from event
   // this function should set the value of description in default
   // to nothing when invoked
+  //i wil set the value of dicription info because i bieleve if its false the discription does not appear
 
   toggleDescription: function(fish){
-  	console.log(!this.get(this.defaults.displayInfo))
+  	console.log(this.defaults.displayInfo)
   	this.set(this.defaults.displayInfo,!this.get(this.defaults.displayInfo))
+    // i can print the values but it does not render
   }
 
 });
