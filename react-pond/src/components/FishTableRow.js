@@ -1,18 +1,24 @@
+
+
+//pass props to the constructor and super
 class FishTableRow extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       showDescription: false
     };
   }
 
   // Currently, the image being displayed is hardcoded from tinyurl.com 
+  // here somewhere i need to call FishTable and pass props or a property using {}
   render() {
     return (
       <tr onClick={() => this.setState({showDescription: !this.state.showDescription})}>
         <td className="fish-name">Nemo</td>
         <td>
-          <img src="http://tinyurl.com/h8o5szh" />
+        // here i will call the fishtable and pass dynamic props to it
+          <FishTable pic={}/>
+          // <img src={`http://tinyurl.com/<%= >`} />
         </td>
         {this.state.showDescription ? <td className="fish-description">Does anyone know where my dad is?</td> : null}
       </tr>

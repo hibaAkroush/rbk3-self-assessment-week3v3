@@ -1,4 +1,7 @@
-var FishTable = () => (
+
+// this component might accept props from fishTableRow
+//i will code it to accept a property of an object using {}
+var FishTable = ({}) => (
   <table>
     <tbody>
       <FishTableRow />
