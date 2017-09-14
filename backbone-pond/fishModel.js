@@ -13,13 +13,10 @@ var Fish = Backbone.Model.extend({
   // to nothing when invoked
   //i wil set the value of dicription info because i bieleve if its false the discription does not appear
 
-  toggleDescription: function(fish){
-  	console.log(this.defaults.displayInfo)
-  	this.set(this.defaults.displayInfo,!this.get(this.defaults.displayInfo))
-    // i can print the values but it does not render
+  toggleDescription: function(){
+  	this.set("displayInfo",!this.get("displayInfo"))
+    this.trigger("toggle:description",this);
   }
 
 });
 
-
-//var fishTemplate = this.model.get('displayInfo') ? this.fishTemplateDetails : this.fishTemplateBasic;
