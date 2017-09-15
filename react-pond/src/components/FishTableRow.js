@@ -17,10 +17,10 @@ class FishTableRow extends React.Component {
         <td className="fish-name">Nemo</td>
         <td>
         // here i will call the fishtable and pass dynamic props to it
-          <FishTable pic={}/>
+          <FishTable pic={this.props.fish.image}/>
           // <img src={`http://tinyurl.com/<%= >`} />
         </td>
-        {this.state.showDescription ? <td className="fish-description">Does anyone know where my dad is?</td> : null}
+        {this.state.showDescription ? <td className="fish-description">{this.props.fish.discription}</td> : null}
       </tr>
     )
   }
